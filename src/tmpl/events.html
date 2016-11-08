@@ -1,0 +1,30 @@
+<div class="row">
+	<div class="col-md-12">
+	<br />	
+		<div class="text-center">
+			<a class="btn btn-primary" href="/newevent">New Event</a>
+			<a class="btn btn-primary" href="/newuser">New User</a>
+		</div>
+	</div>
+</div>
+
+<br><br>
+<div class="row">
+
+    <div class="col-md-4" ng-repeat="event in allEvents">
+        <div class=" panel panel-info">
+            <div class="panel-heading text-center">                       
+                {{event.Name}}
+            </div>
+            <div class="panel-body">
+                <p>Event Type: {{event.Type}}</p>
+                <p>Host: {{event.Host}}</p>
+ 				<p>Event start date and time: {{event.Start}}</p>
+                <p>Event end date and time: {{event.End}}</p>
+				<p>Guest list: {{event.Guests}}</p>    
+				<p>Location: {{event.Location}}</p>  
+				<p>Message: {{event.Message}}</p>                     
+            </div>
+        </div>
+    </div>
+</div>

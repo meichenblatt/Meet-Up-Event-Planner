@@ -1,0 +1,46 @@
+<div class="row">
+	<div class="col-md-6 col-md-offset-3 col-sm-12 col-sm-offset-0">
+
+		<h3 class="text-center">New Event</h3>
+		<br />	
+		<form ng-submit="createEvent()">
+			<label for="ename">* Event Name: </label>			
+			<input type="text" id="ename" class="form-control" placeholder="Jason and Adeles Wedding" autofocus required title="Oops the event name must have at least 5 letters" ng-model="ename" ng-keyup="validate('ename')">
+			<br />
+			
+			<label for="etype">* Type of Event: </label>			
+			<input type="text" id="etype" class="form-control" placeholder="Birthday" required title="Oops type of event must have at least 4 letters" ng-model="etype" ng-keyup="validate('etype')" list="TypeOfEvent">
+				<datalist id="TypeOfEvent">
+					<option value="Birthday Party"></option>
+					<option value="Conference"></option>
+					<option value="Wedding"></option>
+				</datalist>
+
+			<br />
+			<label for="host">* Host: </label>			
+			<input type="text" id="host" class="form-control" placeholder="Adele" title="Oops the host name must have at least 4 letters" ng-model="host" ng-keyup="validate('host')">
+			<br />
+			<label for="start">* Start Date and Time: </label>			
+			<input type="datetime-local" id="start" class="form-control" required ng-model="start" ng-keyup="validate('start')">
+			<p id="startMessage"></p>
+			<label for="end">* End Start and Time: </label>			
+			<input type="datetime-local" id="end" class="form-control" required ng-model="end" ng-keyup="validate('end')">
+			<p id="endMessage"></p>
+			<label for="guests">* Guest list: </label>			
+			<input type="text" id="guests" class="form-control" required placeholder="John Smith, Marry Jones, Anna Walker..." ng-model="guests" ng-keyup="validate('guests')">
+			<br />
+			<label for="location">* Location: </label>			
+			<input type="text" id="location" class="form-control" required placeholder="123 Main St. Los Angeles, CA" ng-model="location" ng-keyup="validate('location')">	
+			<br />	
+			<label for="message">Message: </label>			
+			<textarea id="message" class="form-control" placeholder="(Optional)" ng-model="message"></textarea> 	
+			<br />
+			<input type="submit" class="btn btn-primary" value="Create My Event">	
+		</form>
+		
+		<br />
+		* required
+	</div>
+</div>
+
+

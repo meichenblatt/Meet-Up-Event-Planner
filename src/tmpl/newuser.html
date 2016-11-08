@@ -1,0 +1,32 @@
+<div class="row">
+	<div class="col-md-6 col-md-offset-3 col-sm-12 col-sm-offset-0">
+
+		<h3 class="text-center">Register</h3>
+		<br />	
+		<form name="newUser" ng-submit="createAccount()">
+			<label for="name">* Name: </label>			
+			<input type="text" name="name" id="name" class="form-control" placeholder="John Smith" autofocus required autocomplete="name" ng-keyup="validate('name')">
+			<br />
+			<label for="email">* Email: </label>			
+			<input type="email" name="email" id="email" class="form-control" placeholder="example@example.com" required autocomplete="email" ng-keyup="validate('email')">
+			<p style="color:red;">{{emailError}}</p>
+			<label for="password">* Password: </label> 		
+			<input type="password" id="password" class="form-control" placeholder="******" required pattern="(?=^.{8,}$)((?=.*\d)|(?=.*\W+))(?![.\n])(?=.*[A-Z])(?=.*[a-z]).*$" title="Oops your password must have an UpperCase, LowerCase, Number/SpecialChar and min 8 Chars" ng-keyup="validate('password')">
+			<p style="color:red;">{{passwordError}}</p>
+			<label for="employer">Employer: </label>			
+			<input type="text" id="employer" class="form-control" placeholder="Company Name (Optional)">
+			<br />
+			<label for="jobTitle">Job Title: </label>			
+			<input type="text" id="jobTitle" class="form-control" placeholder="Manager (Optional)">
+			<br />
+			<label for="birthday">Birthday: </label>			
+			<input type="date" id="birthday" class="form-control">	
+			<br />	
+			<input type="submit" class="btn btn-primary" value="Create My Account ">	
+		</form>
+		
+		<br />
+		* required
+	</div>
+</div>
+

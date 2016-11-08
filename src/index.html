@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en-us" ng-app="EventApp">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=0">
+    <base href="/">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+
+    <title>Meet-up Event Planner</title>
+</head>
+<body>
+
+    <div class="container">
+
+        <div class="row">
+
+            <div class="col-md-12">
+                <div class="text-center">
+                    <a href="/">
+                        <h2>Meet-up Event Planner</h2>
+                    </a>
+                </div>             
+            </div>            
+
+        </div>
+        
+
+        <div class="row">
+
+            <div class="col-md-12">
+
+                <div class="row" ng-view="">
+
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+
+    
+    <!--Angular-->
+    <script src="js/angular.min.js"></script>
+    <script src="js/angular-route.min.js"></script>
+ 
+    <!--Application-->
+    <script src="js/app.js"></script>
+
+    <!--Application Controllers-->
+    <script src="controllers/events.js"></script>
+    <script src="controllers/newevent.js"></script>
+    <script src="controllers/newuser.js"></script>
+    
+</body>
+</html>
