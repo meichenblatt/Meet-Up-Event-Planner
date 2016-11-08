@@ -10,8 +10,19 @@ In the root directory of the app run:
 $ npm install
 ```
 
+For developer mode:
 
-Thank you!
+```
+$ gulp
+```
+
+For production mode:
+
+```
+$ gulp serve:dist
+```
+
+Enjoy!
 Mendel
 
  
