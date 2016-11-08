@@ -22,7 +22,7 @@ For production mode:
 $ gulp serve:dist
 ```
 
-Enjoy!
+Enjoy!  
 Mendel
 
  
